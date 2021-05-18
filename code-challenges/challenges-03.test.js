@@ -27,6 +27,14 @@ For example, typeNum([1, 'bob' ,3]) returns [1,3].
 
 const typeNum = (arr) => {
   // Solution code here...
+
+  let newArr=[]
+newArr = arr.filter((n)=>{
+  return !(isNaN(n))
+
+})
+return newArr;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -39,8 +47,16 @@ For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 
 const containsAnd = (arr) => {
   // Solution code here...
-};
 
+  let newArr=[]
+newArr = arr.filter((n)=>{
+ n=n.toLowerCase()
+ n=n.includes("and")
+return n;
+})
+return newArr;
+
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -50,7 +66,13 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+
+  let newArr=[]
+
+  newArr= arr.filter((n)=>{
+    return (n%2==1)
+  })
+  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -63,8 +85,13 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
-};
+  let newArr=[]
 
+  newArr= arr.filter((n)=>{
+    return !(forbiddenValues.includes(n))
+  })
+  return newArr
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 - Stretch Goal
 
