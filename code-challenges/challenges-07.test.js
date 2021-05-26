@@ -186,7 +186,7 @@ const splitFoods = (recipe) => {
  itemName =LastSpace.slice(2) //after find the space  by one
  itemName=itemName.join(' ')
 
- result.push(itemName)
+ result.push(itemName);
  }
 
  return result
