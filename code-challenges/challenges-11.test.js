@@ -98,29 +98,25 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 
 const divisibleByFiveTwoToThePower = (input) => {
   // Solution code here...
-let newArr=[]
-let allArray=[]
-
-  input.map((item)=> {
+let filteredArray=[]
+let Allarrays=[]
+ input.map((item)=> {
 
  item.filter((num)=>{
-   if(num % 5 ===0 )
+   if(num % 5 ===0 && typeof num == 'number')
   {
-    newArr.push(Math.pow(2, num))
+    filteredArray.push(Math.pow(2, num))
   }
 
 
   })
+  Allarrays.push(filteredArray)
+  filteredArray=[]
 
-  allArray.push(newArr)
- 
-
-console.log(allArray)
-  
-
-  
 })
-return allArray
+
+return Allarrays
+
   };
 
 
@@ -188,7 +184,19 @@ let starWarsData = [{
 
 let findMaleAndFemale = (data) => {
   // Solution code here...
-};
+let strName=''
+  const gender=data.map((item)=>{
+if(item.gender =='male'|| item.gender=='female')
+{
+  strName=strName+item.name+' and '
+}
+  
+  })
+
+
+
+  return strName.substr(0, strName.length-5)
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 6 
