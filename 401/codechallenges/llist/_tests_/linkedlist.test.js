@@ -51,4 +51,61 @@ describe('insert to the head', () => {
 
 
   });
+
+
+  it('Append string in the linked list', () => {
+    const ll = new LinkedList();
+    ll.append('a');
+    ll.append('b');
+ 
+
+    expect(ll.head.value).toEqual('a');
+    expect(ll.head.next.value).toEqual('b');
+
+
+  });
+
+  it('Add string in specific place agter', () => {
+    const ll = new LinkedList();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('b',1)
+
+    expect(ll.head.value).toEqual('a');
+    expect(ll.head.next.next.value).toEqual(1);
+
+
+  });
+
+
+  it('Add string in specific place after ', () => {
+    const ll = new LinkedList();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertAfter('b',1)
+
+    expect(ll.head.value).toEqual('a');
+    expect(ll.head.next.next.value).toEqual(1);
+
+
+  });
+
+
+  it('Add string in specific place before ', () => {
+    const ll = new LinkedList();
+    ll.append('a');
+    ll.append('b');
+    ll.append('c');
+    ll.append('d');
+    ll.insertBefore('b',1)
+
+    expect(ll.head.value).toEqual('a');
+    expect(ll.head.next.value).toEqual(1);
+
+
+  });
 });
