@@ -16,5 +16,14 @@
     "jest": "^26.0.1",
     "mustache": "^4.0.1",
     "supertest": "^4.0.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahaamq/data-structures-and-algorithms-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bahaamq/data-structures-and-algorithms-/issues"
+  },
+  "homepage": "https://github.com/bahaamq/data-structures-and-algorithms-#readme"
 }
