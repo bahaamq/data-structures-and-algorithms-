@@ -4,6 +4,8 @@ const Node = require('./node');
 class LinkedList {
     constructor() {
         this.head = null;
+        this.tail=null
+        this.llLength=0
     }
     insert(value) {
         // this.head = new Node(value, this.head);
@@ -15,6 +17,7 @@ class LinkedList {
             node.next = this.head;
             this.head = node;
         }
+        this.llLength++
     }
 
 
@@ -40,20 +43,22 @@ class LinkedList {
     }
 
     tostring() {
-
+let c=0;
         if (this.head) {
             let currentNode = this.head;
             let str = ""
 
             while (currentNode) {
                 str = str + `{${currentNode.value}} ->`
-
+c++;
+                this.tail=currentNode
                 currentNode = currentNode.next;
 
             }
             str = str + "NULL"
-            console.log(str)
-
+            // console.log(str)
+console.log('hhh'+this.tail.value)
+this.llLength=c
             return str
         }
     }
@@ -74,6 +79,8 @@ else
         }
         currentNode.next = node;
     }
+
+    this.llLength++
     }
 
     insertAfter(value, newValue)
@@ -93,8 +100,10 @@ else
     //    console.log(currentNode.value)
        currentNode = currentNode.next;
  
-  
-   }}
+   }
+
+   this.llLength++
+}
 
     insertBefore(val, newVal) {
 
@@ -113,9 +122,33 @@ else
               cureentNode = cureentNode.next;
         
             }
+            
+       this.llLength++
           }
+//Reverse
 
-        
-      
+      kthelement(pos)
+      {
+
+          let getnumofloop=this.llLength-pos
+
+          let currentNode = this.head;
+        let counter=0;
+let value='Exception';
+          while (currentNode && getnumofloop >=0) {
+        counter++
+        if(counter === getnumofloop)
+        {
+value=currentNode.value
+break
+        }
+              
+              currentNode = currentNode.next;
+
+          }
+console.log(value)
+          return value
+      }
+
 }
 module.exports = LinkedList;
