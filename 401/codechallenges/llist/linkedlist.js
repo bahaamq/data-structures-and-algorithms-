@@ -17,6 +17,7 @@ class LinkedList {
             node.next = this.head;
             this.head = node;
         }
+        this.llLength++
     }
 
 
@@ -78,6 +79,8 @@ else
         }
         currentNode.next = node;
     }
+
+    this.llLength++
     }
 
     insertAfter(value, newValue)
@@ -97,8 +100,10 @@ else
     //    console.log(currentNode.value)
        currentNode = currentNode.next;
  
-  
-   }}
+   }
+
+   this.llLength++
+}
 
     insertBefore(val, newVal) {
 
@@ -117,13 +122,13 @@ else
               cureentNode = cureentNode.next;
         
             }
+            
+       this.llLength++
           }
 //Reverse
 
       kthelement(pos)
       {
-          //get length of the llinked list
-          let length =this.tostring()
 
           let getnumofloop=this.llLength-pos
 
@@ -145,6 +150,5 @@ console.log(value)
           return value
       }
 
-      //Scretch Goals (MID element)
 }
 module.exports = LinkedList;
