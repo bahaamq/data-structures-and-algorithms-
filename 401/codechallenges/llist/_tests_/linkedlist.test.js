@@ -152,7 +152,6 @@ describe('Check values', () => {
     ll.append('e');
     ll.append('f');
 
-
     ll.kthelement(6)
     expect(ll.llLength).toEqual(6);
     expect(ll.kthelement(6)).toEqual('Exception')
@@ -184,7 +183,26 @@ describe('Check values', () => {
 
   });
 
+  // it('merge  linked lists', () => {
+
+  //   const ll2 = new LinkedList();
+  //   const ll3 = new LinkedList();
+
+  //   ll2.append('a');
+  //   ll2.append('b');
+  //   ll2.append('4');
+  //   ll2.append('d');
+  //   ll2.append('4');
+  //   ll2.append('5');
+
+  //   ll3.append('4');
+  //   ll3.append('4');
+  //   ll3.append('4');
+
+  //   LinkedList.zipLists(ll2, ll3)
+  //   // expect(zipLists(ll2, ll3)).toEqual();
 
 
+  // });
 
 });

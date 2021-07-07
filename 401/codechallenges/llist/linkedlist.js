@@ -150,5 +150,12 @@ console.log(value)
           return value
       }
 
+
+     static zipLists(ll2,ll3)
+      {
+
+
+      }
+
 }
 module.exports = LinkedList;
