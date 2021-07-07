@@ -183,26 +183,82 @@ describe('Check values', () => {
 
   });
 
-  // it('merge  linked lists', () => {
+  it('is balindrome constant charachters', () => {
 
-  //   const ll2 = new LinkedList();
-  //   const ll3 = new LinkedList();
-
-  //   ll2.append('a');
-  //   ll2.append('b');
-  //   ll2.append('4');
-  //   ll2.append('d');
-  //   ll2.append('4');
-  //   ll2.append('5');
-
-  //   ll3.append('4');
-  //   ll3.append('4');
-  //   ll3.append('4');
-
-  //   LinkedList.zipLists(ll2, ll3)
-  //   // expect(zipLists(ll2, ll3)).toEqual();
+    const ll2 = new LinkedList();
 
 
-  // });
+    ll2.append('a');
+    ll2.append('a');
+    ll2.append('a');
+    ll2.append('a');
+    ll2.append('a');
+
+
+
+    const isBalindrome=ll2.isBalindrome()
+  
+    expect(isBalindrome).toEqual(true);
+
+  });
+
+
+  it('is balindrome even chars', () => {
+
+    const ll2 = new LinkedList();
+
+
+    ll2.append('m');
+    ll2.append('o');
+    ll2.append('o');
+    ll2.append('m');
+
+
+
+    const isBalindrome=ll2.isBalindrome()
+  
+    expect(isBalindrome).toEqual(true);
+
+  });
+
+  
+  it('is balindrome odd chars', () => {
+
+    const ll2 = new LinkedList();
+
+
+    ll2.append('t');
+    ll2.append('a');
+    ll2.append('c');
+    ll2.append('o');
+    ll2.append('c');
+    ll2.append('a');
+    ll2.append('t');
+
+    const isBalindrome=ll2.isBalindrome()
+  
+    expect(isBalindrome).toEqual(true);
+
+  });
+
+  it('is balindrome falsy value chars', () => {
+
+    const ll2 = new LinkedList();
+
+
+    ll2.append('t');
+    ll2.append('a');
+    ll2.append('c');
+    ll2.append('o');
+    ll2.append('r');
+    ll2.append('c');
+    ll2.append('a');
+    ll2.append('t');
+
+    const isBalindrome=ll2.isBalindrome()
+  
+    expect(isBalindrome).toEqual(false);
+
+  });
 
 });

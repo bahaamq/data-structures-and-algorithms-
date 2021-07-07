@@ -150,12 +150,58 @@ console.log(value)
           return value
       }
 
-
-     static zipLists(ll2,ll3)
+      isBalindrome()
       {
+          let str=""
+//Estblaish current node to point to head
+          let currentNode = this.head;
 
+          //Convert LL TO STRing
+while(currentNode!=null)
+{
+
+str=str+currentNode.value
+currentNode=currentNode.next
+
+}
+// end of convert ll to string
+
+let strLengthall=str.length // taking the length of string
+let strLength=strLengthall
+
+if(strLength%2==1) // check if its odd as it always +0.5 returns real number when dividision by /2
+{
+    strLength=strLength/2-0.5
+}
+else
+{
+    strLength=strLength/2
+}
+let strReverse=""
+let cc=0;
+let strForward=""
+
+//strReverse A result of contaction  loop that starts from the end of the str till the middle
+// strForward A result of containing from zero till the middle
+for(let i=strLengthall-1 ; i >=strLength ; i--)
+{
+    strReverse=strReverse+str[i]
+ 
+    strForward=strForward+str[cc]
+    cc++
+}
+//if they are equal thenthey are Balindrome!
+if(strReverse==strForward)
+{
+    return true
+}
+else{
+    return false
+}
 
       }
+
+
 
 }
 module.exports = LinkedList;
