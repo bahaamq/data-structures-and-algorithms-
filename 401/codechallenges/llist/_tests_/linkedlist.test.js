@@ -261,4 +261,24 @@ describe('Check values', () => {
 
   });
 
+  it('zipped', () => {
+
+    const ll1 = new LinkedList();
+    const ll2 = new LinkedList();
+
+
+    ll1.append('t');
+
+    ll1.append('a');
+
+    ll1.append('b');
+    ll1.append('c');
+
+
+    ll2.append('rrr');
+    expect(LinkedList.zipped(ll1,ll2)).toEqual("{t} ->{rrr} ->{a} ->{b} ->{c} ->NULL");
+
+  
+  });
+
 });

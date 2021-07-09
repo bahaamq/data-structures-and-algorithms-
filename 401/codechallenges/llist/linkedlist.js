@@ -13,9 +13,15 @@ class LinkedList {
         const node = new Node(value);
         if (!this.head) {
             this.head = node;
+            console.log("first add to head"+this.head.next)
         } else {
             node.next = this.head;
+            console.log("sec add to head"+node.next.next)
+
             this.head = node;
+
+            // console.log("sec add to head"+this.head.next)
+
         }
         this.llLength++
     }
@@ -79,8 +85,9 @@ else
         }
         currentNode.next = node;
     }
-
     this.llLength++
+
+
     }
 
     insertAfter(value, newValue)
@@ -150,6 +157,36 @@ console.log(value)
           return value
       }
 
+    static  zipped(l1,ll2)
+      {
+        const ll = new LinkedList();
+        console.log(l1)
+
+l1=l1.head
+ll2=ll2.head
+let num=ll.llLength
+while (l1 !== null || ll2 !== null) {
+    if(l1 !== null)
+    {
+    ll.append(l1.value)
+    l1=l1.next
+
+    }
+
+    if(ll2 !== null)
+    {
+    ll.append(ll2.value)
+    ll2=ll2.next
+
+    }
+
+
+}
+
+
+return ll.tostring()
+
+      }
       isBalindrome()
       {
           let str=""
