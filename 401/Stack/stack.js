@@ -26,7 +26,7 @@ else
     pop() {
 this.tempTop=this.top
  this.top=this.top.next
-console.log(this.tempTop.value)
+// console.log(this.tempTop.value)
         return this.tempTop.value
         
     }
