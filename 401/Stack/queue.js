@@ -1,7 +1,7 @@
 'use strict';
 /* eslint-disable */
 const Node = require('./node');
-class Stack {
+class Queue {
     constructor() {
     this.top=null
         this.tempTop=null
@@ -18,7 +18,6 @@ let currentNode=this.top
 while(currentNode.next)
 {
     currentNode=currentNode.next
-    console.log('HEHE')
 }
 currentNode.next=node
 
@@ -38,4 +37,5 @@ this.top=this.top.next
         return this.top ? this.top.value: null;
     }
 }
-module.exports = Stack;
+
+module.exports = Queue;
