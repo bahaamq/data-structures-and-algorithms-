@@ -36,6 +36,19 @@ this.top=this.top.next
     peek() {
         return this.top ? this.top.value: null;
     }
+
+    isEmpty()
+    {
+        if(!this.top)
+{
+return true
+}
+
+else 
+{
+    return false
+}
+    }
 }
 
 module.exports = Queue;
