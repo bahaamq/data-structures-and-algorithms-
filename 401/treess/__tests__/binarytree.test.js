@@ -147,6 +147,18 @@ describe('Binary Tree', () => {
 
     });
 
+
+    it('if all elements are in the right of the tree ', () => {
+
+      let add4=new BinarysearcheTree()
+      add4.insert(10)
+      add4.insert(12)
+      add4.insert(14)
+      add4.insert(16)
+ 
+
+      expect(add4.getMax()).toEqual(16);
+    });
  
 });
 

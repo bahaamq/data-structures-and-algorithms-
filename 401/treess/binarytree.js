@@ -42,7 +42,7 @@ class BinaryTree {
     getMax()
     {
 //There ia no right so the root is he biggest
-
+//If All elements in the right of tree the case will be O(N)
 if(!this.root)
 {
   return "Empty Tree!"
