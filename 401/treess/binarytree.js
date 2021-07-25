@@ -31,46 +31,91 @@ class BinaryTree {
       const result = [];
       const _traverse = (node) => {
         if (node.left) _traverse(node.left);
+        console.log(node.val)
         result.push(node.val);
         if (node.right) _traverse(node.right);
       };
       _traverse(this.root);
       return result;
     }
+
+    getMax()
+    {
+//There ia no right so the root is he biggest
+//If All elements in the right of tree the case will be O(N)
+if(!this.root)
+{
+  return "Empty Tree!"
+}
+if(!this.root.right)
+{
+  return this.root.val
+}
+
+    let max=0
+      const _maximum = (node) => {
+      
+       max=node.val
+
+if(node.right)
+{
+_maximum(node.right)
+
+}
+
+
+};
+      _maximum(this.root);
+return max   
+ }
   }
   
   class BinarysearcheTree extends BinaryTree {
     constructor(root) {
-        super(root);
+super(root);
     }
 
-    insert(value)
+
+    insert(val)
     {
-let node = new Node(value)
-let curr=this.root
+
+let node = new Node(val)
+
+if(!this.root)
+{
+this.root=node
+}
+console.log(this.root)
+let curr= this.root;
+
 
 const _isnert=(node)=>
 {
-if(node.value > curr.value)
+  //First iteration
+if(node.val > curr.val)
 {
     //if tyere is a right..
     if(!curr.right)
     {
         curr.right=node
+        // this.root.right=node
     }
-    //keep going to the right cuzthe value is still bigger and the right always bigger untill there is no right
+    //keep going to the right cuzthe val is still bigger and the right always bigger untill there is no right
     else
     {
     curr=curr.right
     _isnert(node)
     }
+
 }
 
-else if(node.value < curr.value)
+else if(node.val < curr.val)
 {
     if(!curr.left)
 {
     curr.left=node
+    // this.root.left=node
+
 }
 else
 {
@@ -78,15 +123,25 @@ else
 
     _isnert(node)
 }
+
+
 }
     }
 _isnert(node)
+
     }
 
 
-    search(value)
+    search(val)
     {
-return this.inOrder().includes(value)
+      // console.log(this)
+return this.inOrder().includes(val)
     }
+
+
+    // getMax()
+    // {
+    //   return(this.inOrder()[this.inOrder().length-1])
+    // }
   }
   module.exports = {BinaryTree,BinarysearcheTree};

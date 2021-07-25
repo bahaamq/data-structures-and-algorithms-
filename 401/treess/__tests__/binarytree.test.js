@@ -1,7 +1,7 @@
 /* eslint-disable */  
 
 const BinaryTree = require('../binarytree').BinaryTree;
-// const BinarysearcheTree = require('../binarytree').BinarysearcheTree;
+const BinarysearcheTree = require('../binarytree').BinarysearcheTree;
 
 const Node = require('../node');
 
@@ -29,7 +29,7 @@ describe('Binary Tree', () => {
     seven.left = four;
     seven.right = eight2;
     tree = new BinaryTree(ten);
-    // search=new BinarysearcheTree()
+    add=new BinarysearcheTree()
   });
 
 
@@ -48,6 +48,11 @@ describe('Binary Tree', () => {
         expect(tree.root).toBeTruthy();
     });
 
+    
+    it('initialize BST', () => {
+        
+      expect(add instanceof BinarysearcheTree).toBeTruthy();
+  });
  
 });
 
@@ -71,5 +76,90 @@ describe('Binary Tree', () => {
     expect(tree.postOrder()).toEqual(expected);
   });
 
+
+  describe('Traversals,binarysearchtree ', () => {
+
+    
+    it('search item to the tree', () => {
+      add.insert(1)
+      add.insert(2)
+      add.insert(0)
+
+    
+      expect(add.root.val).toEqual(1);
+      expect(add.root.right.val).toEqual(2);
+      expect(add.root.left.val).toEqual(0);
+      expect(add.search(1)).toEqual(true);
+      expect(add.search(9)).toEqual(false);
+
+    });
+
+
+    it('check if inorder sort the array', () => {
+      add.insert(1)
+      add.insert(2)
+      add.insert(0)
+      add.insert(4)
+      add.insert(5)
+      add.insert(6)
+      let expectedArr = [0,1,2,4,5,6];
+
+      expect(add.inOrder()).toEqual(expectedArr);
+  
+    });
+
+
+
+
+    it('get Maximum', () => {
+      add.insert(1)
+      add.insert(2)
+      add.insert(0)
+      add.insert(77)
+      add.insert(115)
+
+      add.insert(15)
+      add.insert(0)
+
+      expect(add.getMax()).toEqual(115);
+
+    });
+
+
+
+    it('get Maximum when the biggest is the root', () => {
+      let add2=new BinarysearcheTree()
+      add2.insert(10)
+      add2.insert(8)
+      add2.insert(5)
+      add2.insert(9)
+ 
+
+      expect(add2.getMax()).toEqual(10);
+
+    });
+
+    it('handling if nothing added ', () => {
+      let add3=new BinarysearcheTree()
+
+
+      expect(add3.getMax()).toEqual("Empty Tree!");
+
+    });
+
+
+    it('if all elements are in the right of the tree ', () => {
+
+      let add4=new BinarysearcheTree()
+      add4.insert(10)
+      add4.insert(12)
+      add4.insert(14)
+      add4.insert(16)
+ 
+
+      expect(add4.getMax()).toEqual(16);
+    });
+ 
+});
 
 });
