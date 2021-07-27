@@ -1,6 +1,8 @@
 /* eslint-disable */  
 const Node = require('./node');
 
+const Queue=require("../Stack/queue")
+
 class BinaryTree {
     constructor(root) {
       this.root = root;
@@ -68,6 +70,46 @@ _maximum(node.right)
       _maximum(this.root);
 return max   
  }
+
+ BFS() {
+  let queue = new Queue()
+  
+console.log(JSON.stringify(this.root))
+  let results=[]
+  queue.enqueue(this.root)
+  let pointer;
+ 
+  if(!this.root)
+  {
+    return "Empty Tree!"
+  }
+
+  while(!queue.isEmpty())
+  {
+
+    pointer=queue.dequeue()
+
+    if(pointer.left)
+    {
+      queue.enqueue(pointer.left)
+    }
+
+    
+    if(pointer.right)
+    {
+      queue.enqueue(pointer.right)
+    }
+
+
+    results.push(pointer.val)
+  }
+
+
+  return results
+}
+
+
+
   }
   
   class BinarysearcheTree extends BinaryTree {
