@@ -16,3 +16,9 @@ Get the max element from the treee by keep going to the right
 
 Find online white board on the below Link
 https://miro.com/welcomeonboard/Wkt2cXFvSkNFek9DeTNrTGltU2V3dm1HbjRRWlhzTGJwS05RZGxzMzBNc05meTVka3dncHo0VHVwZ0xVWmRrTHwzMDc0NDU3MzYwNzAxNjI0MDgw
+
+## BF
+Traversing a tree by Breadth-First approach
+
+Find online white board on the below Link
+https://miro.com/app/board/o9J_l5dOgB4=/

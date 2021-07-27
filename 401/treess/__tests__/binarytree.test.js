@@ -159,7 +159,43 @@ describe('Binary Tree', () => {
 
       expect(add4.getMax()).toEqual(16);
     });
+
+
+    it('BFS full tree', () => {
+
+      const h = new Node('h');
+      const e = new Node('e');
+      const l = new Node('l');
+      const w = new Node('w');
+      const o = new Node('o');
+      const b = new Node('b');
+      const hh = new Node('ahaa');
+
+      h.left=e
+      h.right=l
+      e.left=w
+      e.right=o
+      l.left=b
+      l.right=hh
+      tree2 = new BinaryTree(h);
+let expectedArr= ["h", "e", "l", "w", "o", "b", "ahaa"]
+      tree2.BFS()
+
+      expect(tree2.BFS()).toEqual(expectedArr);
+    });
  
 });
+
+
+it('BFS empty tree', () => {
+
+  
+ let  tree3 = new BinaryTree()
+ tree3.BFS()
+
+  expect(tree3.BFS()).toEqual('Empty Tree!');
+});
+
+
 
 });
