@@ -77,4 +77,65 @@ it('Successfully hash a key to an in-range value', () => {
 expect(hashmap.hash('afdadfawp.z,mvzqi,xk7')).toBeLessThan(5454 );
 
 })
+
+
+
   })
+
+
+  //hash2 repeatedwords
+
+  describe('can successfuly return first repeted word', () => {
+    it('first test case ignore "" and ignore casesensitive', () => {
+  //Static function
+        let data= Hashmap.repeatedWord("It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair, we had everything before us, we had nothing before us, we were all going direct to Heaven, we were all going direct the other way – in short, the period was so far like the present period, that some of its noisiest authorities insisted on its being received, for good or for evil, in the superlative degree of comparison only...")
+        
+        
+        expect(data).toBe("it")
+  })
+
+
+  it('sec test case no special cases ', () => {
+    //Static function
+          let data= Hashmap.repeatedWord("Once upon a time, there was a brave princess who...")
+          
+          
+          expect(data).toBe("a")
+    })
+
+
+    it('third test case  ', () => {
+        //Static function
+              let data= Hashmap.repeatedWord("It was a queer, sultry summer, the summer they electrocuted the Rosenbergs, and I didn’t know what I was doing in New York...")
+              
+              
+              expect(data).toBe("summer")
+        })
+
+        it('adding a random string with  multi dublicates', () => {
+            //Static function
+                  let data= Hashmap.repeatedWord("a a b b cc")
+                  
+                  
+                  expect(data).toBe("a")
+            })
+
+
+        it('adding a random string without dublicate', () => {
+            //Static function
+                  let data= Hashmap.repeatedWord("abc ab")
+                  
+                  
+                  expect(data).toBe("no Repeted words")
+            })
+
+// Since contains function look for the key and the key could have multi values 
+        it('making sure it doesnt return words that differs but have the same asci code', () => {
+            //Static function
+                  let data= Hashmap.repeatedWord("abc cba")
+                  
+                  
+                  expect(data).toBe("no Repeted words")
+            })
+  })
+  
