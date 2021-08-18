@@ -22,3 +22,22 @@ https://miro.com/app/board/o9J_l2fWoEM=/
 
 ## Approach & Efficiency
 Hashmap by saving converting each word in a string into indexes in array and staart saving each word using the helper method set in a hash table untill finding a match , use the helper method contains and get for checking the dublicate, space and thime complexity is O(n)
+
+# challenge 3 Hashmap dublicates in two binary trees
+
+# Challenge Summary
+you are having two binary tree ,, and you want to return the equation values between them using hash tables , find a function called findequal that accepts two values and return array
+
+EX:
+(Values of trees)
+Input : tree1(1,2,8,99) ,, tree2( 8,99,1,55)
+
+Output :  [ 8,99,1 ]
+
+
+## Whiteboard Process
+https://miro.com/app/board/o9J_l13jhiE=/
+
+## Approach & Efficiency
+by using hashing map to find dublicates you are sppeeding up your code in compare with  for example another approach which is sorting the arrays then find dublicates which takes O(n^2) and O(n) space in the worst case assuming all values are dublicated ,, however in hashtable you are speeding it and the space complexity is O(n) in the end but with more contstant values , so hashmap wins in such a case but it takes more memory i think in similar problems!
+
