@@ -41,3 +41,13 @@ https://miro.com/app/board/o9J_l13jhiE=/
 ## Approach & Efficiency
 by using hashing map to find dublicates you are sppeeding up your code in compare with  for example another approach which is sorting the arrays then find dublicates which takes O(n^2) and O(n) space in the worst case assuming all values are dublicated ,, however in hashtable you are speeding it and the space complexity is O(n) in the end but with more contstant values , so hashmap wins in such a case but it takes more memory i think in similar problems!
 
+
+
+## leftjoin hashtable
+# Challenge Summary
+Giving a two hashmap , write a function that return the left join of them 
+
+Note:No problem which datastructure to save the returned value
+
+## Whiteboard Process
+https://miro.com/app/board/o9J_l14KFGc=/
