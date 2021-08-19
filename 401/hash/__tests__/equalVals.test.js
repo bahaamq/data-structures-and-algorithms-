@@ -5,6 +5,7 @@ const equalVals = require('../equalVals.js');
 const Node = require('../../treess/node');
 
 const BTree= require("../../treess/binarytree").BinaryTree
+const Hashmap = require('../index.js');
 
 describe('make sure to define a hashmap', () => {
   it('some equal values', () => {
@@ -37,7 +38,7 @@ const h1 = new Node(8);
     h1.right=h3
 
     tree2=new BTree(h1)
-    equalVals(tree,tree2)
+   equalVals(tree,tree2)
 
     expect(equalVals(tree,tree2)).toEqual([ 8, 14, 11 ])
 })

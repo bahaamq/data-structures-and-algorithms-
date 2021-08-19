@@ -53,6 +53,19 @@ class Node {
       }
     }
 
+    setWithouthash(key,value)
+    {
+      const Withouthash = key;
+      // we need to check if a value already exist in the index
+      if (!this.storage[Withouthash]) {
+        const ll = new LinkedList();
+        ll.prepend({ [Withouthash]: value });
+        this.storage[Withouthash] = ll; // [222] = {head:{value:{"key","value"},next:null}}
+      } else {
+        this.storage[Withouthash].prepend({ [Withouthash]: value });
+      }
+    }
+
     contains(key) {
       const hash = this.hash(key);
 

@@ -25,7 +25,7 @@ for(let i=0 ; i < arr2.length; i++)
 
 if(hashmap.contains(arr2[i].toString()))
 {
-    newArr.push(arr2[i])
+    newArr.push(arr2[i].head.value)
 }
   
 }
